@@ -1,14 +1,326 @@
--- Don't use chinese comment.
+--[[
+        {
+    "modes": [
+        {
+            "isBasic": true,
+            "macro": true,
+            "map": [
+                [
+                    "`",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "0",
+                    "-",
+                    "=",
+                    "Backspace"
+                ],
+                [
+                    "Tab",
+                    "Q",
+                    "W",
+                    "E",
+                    "R",
+                    "T",
+                    "Y",
+                    "U",
+                    "I",
+                    "O",
+                    "P",
+                    "[",
+                    "]",
+                    "\\"
+                ],
+                [
+                    "Escape",
+                    "A",
+                    "S",
+                    "D",
+                    "F",
+                    "G",
+                    "H",
+                    "J",
+                    "K",
+                    "L",
+                    ";",
+                    "'",
+                    "Enter"
+                ],
+                [
+                    "ShiftLeft",
+                    "Z",
+                    "X",
+                    "C",
+                    "V",
+                    "B",
+                    "N",
+                    "M",
+                    ",",
+                    ".",
+                    "/",
+                    "ShiftRight"
+                ],
+                [
+                    "CapsLock",
+                    "ControlLeft",
+                    "AltLeft",
+                    "MetaLeft",
+                    "Space",
+                    "Space",
+                    "ControlRight",
+                    "customized1",
+                    "customized2",
+                    "mode1",
+                    "mode2"
+                ]
+            ]
+        },
+        {
+            "macro": true,
+            "map": [
+                [
+                    null,
+                    "F1",
+                    "F2",
+                    "F3",
+                    "F4",
+                    "F5",
+                    "F6",
+                    "F7",
+                    "F8",
+                    "F9",
+                    "F10",
+                    "F11",
+                    "F12",
+                    null
+                ],
+                [
+                    null,
+                    "BrightDown",
+                    "BrightUp",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "VolumeDown",
+                    "VolumeUp",
+                    "Mute"
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            ],
+            "trigger": "pressing"
+        },
+        {
+            "macro": false,
+            "map": [
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "Delete"
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "PrintScreen"
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "ArrowLeft",
+                    "ArrowDown",
+                    "ArrowUp",
+                    "ArrowRight",
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            ],
+            "trigger": "toggle"
+        }
+    ],
+    "macro": [
+        {
+            "modifiers": [
+                "ControlRight"
+            ],
+            "key": "J",
+            "expression": "{ArrowDown}"
+        },
+        {
+            "modifiers": [
+                "ControlRight"
+            ],
+            "key": "K",
+            "expression": "{ArrowUp}"
+        },
+        {
+            "modifiers": [
+                "ControlRight"
+            ],
+            "key": "L",
+            "expression": "{ArrowRight}"
+        },
+        {
+            "modifiers": [
+                "ControlRight"
+            ],
+            "key": "H",
+            "expression": "{ArrowLeft}"
+        },
+        {
+            "modifiers": [
+                "ControlRight"
+            ],
+            "key": "A",
+            "expression": "{Home}"
+        },
+        {
+            "modifiers": [
+                "ControlRight"
+            ],
+            "key": "E",
+            "expression": "{End}"
+        },
+        {
+            "modifiers": [
+                "ControlRight"
+            ],
+            "key": "D",
+            "expression": "{Delete}"
+        },
+        {
+            "modifiers": [],
+            "key": "customized1",
+            "expression": "{<^-down}{ArrowLeft}"
+        },
+        {
+            "modifiers": [],
+            "key": "customized2",
+            "expression": "{<^-down}{ArrowRight}"
+        }
+    ]
+}
+    ]]--
+    local kb_index=[[053,030,031,032,033,034,035,036,037,038,039,045,046,042,000,000,043,020,026,008,021,023,028,024,012,018,019,047,048,049,000,000,041,004,022,007,009,010,011,013,014,015,051,052,040,040,000,000,225,225,029,027,006,025,005,017,016,054,055,056,229,229,000,000,057,224,226,227,044,044,044,044,228,228,141,142,128,129,000,000,053,058,059,060,061,062,063,064,065,066,067,068,069,042,000,000,043,130,131,008,021,023,028,024,012,018,019,132,133,134,000,000,041,004,022,007,009,010,011,013,014,015,051,052,040,040,000,000,225,225,029,027,006,025,005,017,016,054,055,056,229,229,000,000,057,224,226,227,044,044,044,044,228,228,141,142,128,129,000,000,053,030,031,032,033,034,035,036,037,038,039,045,046,076,000,000,043,020,026,008,021,023,028,024,012,018,019,047,048,070,000,000,041,004,022,007,009,010,080,081,082,079,051,052,040,040,000,000,225,225,029,027,006,025,005,017,016,054,055,056,229,229,000,000,057,224,226,227,044,044,044,044,228,228,141,142,128,129,000,000,]];
+local consumer_map={[130]=112,[131]=111,[132]=234,[133]=233,[134]=226};
+local mode_trigger_map={[128]=2,[129]=3};
+local modes_config={{["isBasic"]=true,["macro"]=true},{["trigger"]="pressing",["macro"]=true},{["trigger"]="toggle",["macro"]=false}};
+local ahk_data={[4]={[16]="74"},[7]={[16]="76"},[8]={[16]="77"},[11]={[16]="80"},[13]={[16]="81"},[14]={[16]="82"},[15]={[16]="79"},[141]={[0]="1,0 1,80"},[142]={[0]="1,0 1,79"}};-- Don't use chinese comment.
 -- ahk's map ahk_data[normal_key][modifier_key]
-local ahk_data={}; 
- 
 
+
+-- injected: kb_index,consumer_map,
 -- init_datasheet(file_name, data_width): lua parse the table file,return a table for lua
 -- shift_table: (user shouldn't modify it) which key needs to be output with a shift key 
 -- key_index: (most user may modify it) record 3 modes' usb value in a key map
 -- asciiusb: (user shouldn't modify it) ascii value to usb value
-local key_index_data=init_datasheet("config/key_index.txt",3); 
-local ascii2usb_data=init_datasheet("config/ascii2usb.txt",3);
+local key_index_data=init_datasheet(kb_index,3,1,string.len(kb_index)); 
+--kb_index=nil;
+-- init_datasheet("config/ascii2usb.txt",3);
 
 -- count of rows and column in the "key_index.txt" file
 local rows=5;
@@ -21,8 +333,7 @@ local ahk_avaliable_function={
 }
 
 -- mode2 and mode3's value in key_index.txt file
-local mode2_key=135;
-local mode3_key=136;
+
 -- wait for user releasing all the key, do nothing before releasing
 local wait_release=false;
 
@@ -31,10 +342,8 @@ local key_map_mode=1;
 
 -- use to solve linux capslock delay bug
 local capslockCode=57;
+local clear_key,single_key,get_bit,modifier_compare,output_ahk,media_output,media_output,modifiers2value,set_key_map_mode,key_input_underlying;
 
-function ascii2usb(ascii)
-    return read_datasheet(ascii2usb_data,ascii)
-end
 
 function get_key_from_position(pos,index)
     if not index then
@@ -59,12 +368,12 @@ getmetatable('').__call = function(str,i,j)
     end
 end
 
-function get_bit(num,index) 
+get_bit= function (num,index) 
     return bit32.band(num,bit32.lshift(1,index))>0;    
 end
 
 -- if the modifier keys satisfy the target one
-function modifier_compare(modifier,target)
+modifier_compare= function (modifier,target)
     for i=0,3 do
         local tleft=get_bit(target,i);
         local nleft=get_bit(modifier,i);
@@ -93,7 +402,7 @@ function modifier_compare(modifier,target)
     return true;
 end
 
-function set_key_map_mode(mode,led)
+set_key_map_mode=function(mode,led)
     key_map_mode=mode;
     if mode~=1 and led then
         led_clear();
@@ -117,37 +426,79 @@ local previous_cnt=0;
 local previous_key_map_mode=1;
 local previous_capslock=false;
 
-local media_map={
-    [124]=0x70,
-    [125]=0x6f,
-    [126]=0x65,
-    [127]=0xe2,
-    [128]=0xe9,
-    [129]=0xea,
-}
-function media_output(value)
+local pressed_media=false;
+local withModifierPattern="^(%d+),(%d+)$";
+local keyPattern="^(%d+)$";
+local mediaPattern="^M(%d+)$";
+output_ahk= function (expression)
+    clear_key();
+    local modifier_this_turn=0;
+    local first=true;
+    for section in string.gmatch(expression,"[^ ]+") do 
+        if not first then
+            single_key(modifier_this_turn,0);
+            delay(15);
+        end
+        if string.match(section,withModifierPattern) then
+            local modifier,key = string.match(section,withModifierPattern);
+            single_key(tonumber(modifier),tonumber(key));            
+            modifier_this_turn=modifier;
+        elseif string.match(section,keyPattern) then           
+            local key=string.match(section,keyPattern);
+            single_key(0,tonumber(key));
+        elseif string.match(section,mediaPattern) then           
+            local key=string.match(section,mediaPattern);
+            media_output(tonumber(key));
+            pressed_media=true;
+        end        
+        delay(15);   
+        first=false;      
+    end
+end
+
+function clear_key()
+    single_key(0,0);    
+end
+
+single_key=function(modifier,key)
+    output(modifier,0,key,0,0,0,0,0)
+end
+
+
+
+
+local key_press_pattern="{([^-]+)-([%d%a]+)}";
+
+
+
+media_output= function (value)
     mouse_output(3,value%256,math.floor(value/256),0,0);
 end
-local pressed_media=false;
+
 local pressed_capslock=false;
-function key_input_underlying(modifiers,cnt,key_arr)
+key_input_underlying=function (modifiers,cnt,key_arr)
     local final_normal_keys={};
 
-    if key_map_mode==2 then
-    	key_map_mode=1;
+    if key_map_mode~=1 and modes_config[key_map_mode].trigger=='pressing' then
+        key_map_mode=1;
     end
     -- decide current key_map_mode
     for i=1,cnt do
         local value=get_key_from_position(key_arr[i],1);
-        if value==mode2_key  then
+
+        if mode_trigger_map[value] then
             key_arr[i]=nil;
-            set_key_map_mode(2,true); 	
-        elseif value==mode3_key  then
-            key_arr[i]=nil;
-            if key_map_mode~=3 then
-                set_key_map_mode(3,true);
+            local mode=mode_trigger_map[value];
+            local mode_config_target=modes_config[mode];
+            
+            if mode_config_target.trigger=="toggle" then
+                if key_map_mode ~= mode then
+                    set_key_map_mode(mode,true);
+                else
+                    set_key_map_mode(1,true);
+                end
             else
-                set_key_map_mode(1,true);
+                set_key_map_mode(mode,true);
             end
         elseif value == capslockCode then
             pressed_capslock=true;
@@ -157,10 +508,13 @@ function key_input_underlying(modifiers,cnt,key_arr)
         end        
     end
 
+    local mode_config=modes_config[key_map_mode];
+
+
     -- handle mode2 race condition
-    if key_map_mode ~=2 and previous_key_map_mode == 2 then
-    	clear_key();
-    	return;
+    if mode_config.trigger ~= "pressing" and modes_config[previous_key_map_mode].trigger=="pressing" then
+        clear_key();
+        return;
     end
     
     -- get final key values 
@@ -172,8 +526,8 @@ function key_input_underlying(modifiers,cnt,key_arr)
 
             
 
-            if media_map[value] then
-                media_output(media_map[value]);
+            if consumer_map[value] then
+                media_output(consumer_map[value]);
                 pressed_media=true;
                 return ;
             end
@@ -197,14 +551,16 @@ function key_input_underlying(modifiers,cnt,key_arr)
         wait_release=false;
     end
 
-    if previous_cnt < cnt and ahk_data[final_normal_keys[1]] then 
-        for target_modifiers,expression in pairs(ahk_data[final_normal_keys[1]]) do
-            if modifier_compare(modifiers,target_modifiers) then
-                output_ahk(expression);
-                wait_release=true;
-                return;
+    if mode_config.macro then
+        if previous_cnt < cnt and ahk_data[final_normal_keys[1]] then 
+            for target_modifiers,expression in pairs(ahk_data[final_normal_keys[1]]) do
+                if modifier_compare(modifiers,target_modifiers) then
+                    output_ahk(expression);
+                    wait_release=true;
+                    return;
+                end
+                
             end
-            
         end
     end
 
@@ -214,8 +570,8 @@ function key_input_underlying(modifiers,cnt,key_arr)
 end
 -- return true to capture the input, prevent default handling
 -- cnt: pressing normal keys' count
-function key_input(modifiers,cnt,k1,k2,k3,k4,k5,k6)	
-    local key_arr={k1,k2,k3,k4,k5,k6};    
+function key_input(modifiers,cnt,k1,k2,k3,k4,k5,k6)    
+    local key_arr={k1,k2,k3,k4,k5,k6};
     pressed_capslock=false;
     key_input_underlying(modifiers,cnt,key_arr);
     previous_cnt=cnt;
@@ -224,184 +580,8 @@ function key_input(modifiers,cnt,k1,k2,k3,k4,k5,k6)
     return true;
 end
 
-local modifier2val={
-    ["^"]=1+16,
-    ["+"]=2+32,
-    ["!"]=4+64,
-    ["#"]=8+128,
-    ["<^"]=1,
-    ["<+"]=2,
-    ["<!"]=4,
-    ["<#"]=8,
-    [">^"]=16,
-    [">+"]=32,
-    [">!"]=64,
-    [">#"]=128
-}
-local modifier_pattern="[<>]?[%^%+!#]";
-function modifiers2value(modifiers)
-    local ret=0;
-    for modifier in string.gmatch(modifiers,modifier_pattern) do
-        ret = ret + modifier2val[modifier];
-    end
-    return ret;
-end
-function ahk_parse(text_input)
-    for modifiers,key,expression in string.gmatch(text_input,"([%^%+!#<>]*)([%a%d]+)::(%g+)") do
-        local modifiers=modifiers2value(modifiers);
-        local key_index;
-        if string.match(key,"^%d%d$") or string.match(key,"^%d%d%d$") then
-            key_index=tonumber(key);
-        else
-            key_index=ascii2usb(string.byte(key));
-        end
-        if not ahk_data[key_index] then
-            ahk_data[key_index]={}
-        end
-        ahk_data[key_index][modifiers]=expression;
-    end
-end
-
-
-function match_sub_pattern(str,...)
-    local output = {};
-    local patterns={...};
-    local current = 1;
-    while pos ~= #str do
-        local pos;
-        local kind;
-        for i,p in ipairs(patterns) do
-            local l1,l2=string.find(str,p,current);
-            if l1==current then
-                pos=l2;
-                kind=i;
-                break;
-            end
-        end
-        if pos then
-            table.insert(output,{kind,string.sub(str,current,pos)})
-            current=pos+1;
-        else
-            break;
-        end
-    end
-    return output;
-end
-
-local pressing_modifier_map={};
-local pressing_modifier_value=0;
-
-function clear_key()
-    single_key(0,0);    
-end
-
-function single_key(modifier,key)
-    output(bit32.bor(modifier,pressing_modifier_value),0,key,0,0,0,0,0)
-end
-
-function press_string(str)
-    clear_key();
-    for i=1,#str do
-        press_ascii(str[i]);
-        clear_key();
-        delay(30);
-    end
-end
-
-function press_key(index,shift)
-    clear_key();
-    local modifier=0;
-    if shift then
-        modifier=2;
-    end
-    single_key(modifier,index);
-end
-
-function press_ascii(ascii)
-    local byte=string.byte(ascii);
-    
-    if get_shift(byte)==0 then
-        single_key(0,ascii2usb(byte));
-    else
-        single_key(2,ascii2usb(byte));
-    end
-end
-
-function whole_press_key(key)
-    press_ascii(key);
-    delay(30);
-    clear_key();
-    delay(30);
-end
-
-local key_press_pattern="{([^-]+)-([%d%a]+)}";
-
-
-function mutate_modifiers(modifiers,mutation)
-    function mutate_modifier(modifier)
-        if not pressing_modifier_map[modifier] then
-            pressing_modifier_map[modifier]=0;    
-        end        
-        pressing_modifier_map[modifier]=pressing_modifier_map[modifier]+mutation;        
-    end
-    for modifier in string.gmatch(modifiers,modifier_pattern) do
-        if modifier[1]=="<" or modifier[1]==">" then
-            mutate_modifier(modifier);            
-        else 
-            mutate_modifier("<"..modifier);
-            mutate_modifier(">"..modifier);            
-        end
-    end    
-    pressing_modifier_value=0;
-    for modifier,value in pairs(pressing_modifier_map) do
-        if value>0 then
-            pressing_modifier_value=bit32.bor(pressing_modifier_value,modifier2val[modifier]);            
-        end        
-    end
-end
-function output_ahk(expression)
-    clear_key();
-    local result= match_sub_pattern(expression,"[^{}]+","{%a+}",key_press_pattern);
-    -- parse expression into sections
-    for i,sub_express in ipairs(result) do
-        -- just print
-        if sub_express[1]==1 then
-            press_string(sub_express[2]);
-        -- press a key
-        elseif sub_express[1]==2 then
-            local str=string.sub(sub_express[2],2,-2);
-            if ahk_avaliable_function[str] then
-                ahk_avaliable_function[str]()
-            else
-                local index = get_key_index(str);
-                if index>0 then
-                    if index>127 then
-                        press_key(index-128,true);
-                    else
-                        press_key(index);
-                    end                    
-                else 
-                 
-                end                
-            end
-        -- modifier key down or key up                    
-        elseif sub_express[1]==3 then
-            for modifiers, operation in string.gmatch(sub_express[2], key_press_pattern) do
-                -- print('modifier',modifiers2value(modifiers),operation);
-                if operation == "down" then
-                    mutate_modifiers(modifiers,1);                    
-                elseif operation == "up" then
-                    mutate_modifiers(modifiers,-1);                    
-                end                
-            end            
-        end    
-    end
-    pressing_modifier_map={};
-    pressing_modifier_value=0;
-end
 function main()
-    collectgarbage();
     local ahk_file=read_file("config/config.txt"); 
-    ahk_parse(ahk_file);
-    ahk_file=nil;    
+    ahk_file=nil;  
+    collectgarbage();  
 end
